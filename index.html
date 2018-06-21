@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crescente</title>
+<link href="Style/style.css" rel="stylesheet" type="text/css">
+<link href="Style/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+
+</head>
+
+<body>
+<div class="top"></div>
+
+<!----------------------LODIG FORM START---------------------->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="#">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container form-bottom" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!----------------------LODIG FORM ENC---------------------->
+
+<!---------------------SIGNUP FORM START---------------------->
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="#">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <div class="form-group">
+        <label for="uname"><b>Company Name</b></label>
+        <input type="text" placeholder="Company Name" name="uname" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Owner
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Chief Compliance officer
+        </label>
+      </div>
+      
+      <div class="form-group">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+      </div>
+ 
+      <div class="form-group">
+        <label for="psw"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password" name="psw" required>
+      </div>
+
+      <div class="form-group">
+        <label for="psw"><b>Compliance Role</b></label>
+        <select class="reg-dd">
+          <option>...Select Role...</option>
+          <option>Compliance Controller</option>
+          <option>Banker</option>
+          <option>Dispensary</option>
+          <option>Grower</option>
+          <option>Supplier</option>
+        </select>
+      </div>
+
+
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container form-bottom" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<!---------------------SIGNUP FORM END---------------------->
+
+<div class="header">
+  <div class="container">
+       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+         <div class="com-logo"> <a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""></a>
+         </div>
+       </div>
+       <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+         <div class="log-reg">
+          <span class="log-reg-btn log-reg-gap" onclick="document.getElementById('id01') .style.display='block'" style="width:auto;"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp; <label>Log In</label></span>&nbsp;&nbsp;
+	      <span class="log-reg-btn" onclick="document.getElementById('id02') .style.display='block'" style="width:auto;"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;&nbsp; <label>Register</label></span>   
+         </div>
+       </div>
+  </div>
+</div>
+<div class=" banner jarallax">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>Crescente fully automates and centralizes risk management for banking the cannabis industry. The system provides data monitoring, recordkeeping, and reporting to eliminate the time-consuming and error-prone manual process and mitigates the risks associated with banking the cannabis industry. Batch transaction data and near-real-time customer data can be imported from core processing platforms, wire transfer and teller systems, and state grower databases and stored in a centralized database for ongoing access and analysis. Crescente automates the customer due diligence required during the account opening process, assigns risk ratings based on responses to specific questions, and supports the accurate evaluation of risk based on proven metrics. The capabilities to profile existing customers, perform peer group analyses, maintain research analyst notes and actions, and generate management, board, and auditor reports are also provided.</p>
+    <h3>It Works Like This </h3>
+    <p>Crescente is an enterprise application for monitoring and reporting suspicious financial activities in the cannabis industry. This solution automates any manual process, saving banks valuable time and resources while reducing risks. </p>
+    <p>Crescente uses browser-based technology to facilitate ease-of-use. This solution’s standardized, single-file format allows batch and near-real-time data to be electronically imported and analyzed from core processing platforms, wire transfer and teller systems, and state grower databases. Crescente stores all customer information and transaction records in a central database that is accessible by assigned employees and the risk management department. &nbsp;<a href="#a001">Read More</a></p>
+  </div>
+</div>
+<script src="js/jarallax.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 1300
+		})
+	</script>
+<!-- //Jarallax -->
+
+<!-- smooth scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+<div class="therr-log-tab">
+  <div class="container">
+    <div class="educate">
+            <div class="education-main">
+                <ul class="ch-grid">
+                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 w3agile wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+                        <li>
+                            <div class="ch-item">				
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1">
+                                        <h4><img src="images/ico1.png" class="img-responsive" alt=""></h4>
+                                        <h5>Register as a Banker</h5>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <h6><img src="images/ico1h.png" class="img-responsive" alt=""></h6>
+                                        <h1>Register as a Banker</h1>
+                                        <a href="#" onclick="document.getElementById('id02') .style.display='block'" style="width:auto;"class="reg-btn">Register</a>
+                                    </div>	
+                                </div>
+                            </div>
+                        </li>
+                        </div> 
+                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 w3agile wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+                        <li>
+                            <div class="ch-item">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1">
+                                        <h4><img src="images/ico2.png" class="img-responsive" alt=""></h4>
+                                        <h5>Register as a Dispenser</h5>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <h6><img src="images/ico2h.png" class="img-responsive" alt=""></h6>
+                                        <h1>Register as a Dispenser</h1>
+                                        <a href="#" onclick="document.getElementById('id02') .style.display='block'" style="width:auto;"class="reg-btn">Register</a>
+                                    </div>	
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 w3agile wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+                        <li>
+                         <div class="ch-item">
+                           <div class="ch-info">
+                             <div class="ch-info-front ch-img-1">
+                                        <h4><img src="images/ico3.png" class="img-responsive" alt=""></h4>
+                                        <h5>Register as a Grower</h5>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <h6><img src="images/ico3h.png" class="img-responsive" alt=""></h6>
+                                        <h1>Register as a Grower</h1>
+                                        <a href="#" onclick="document.getElementById('id02') .style.display='block'" style="width:auto;"class="reg-btn">Register</a>
+                                    </div>	
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+                         
+                        <div class="clearfix"> </div>
+                 </ul>
+             </div>
+          </div>
+  </div>
+</div>
+<div class=" contact jarallax">
+  <div class="container">
+    <h2>Contact Us</h2>
+      <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+         <div class="con-form">
+           <form>
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control form-dzn" id="exampleInputEmail1" placeholder="Full Name">
+                </div>            
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control form-dzn" id="exampleInputEmail1" placeholder="Email">
+                </div>            
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control form-dzn" id="exampleInputEmail1" placeholder="Phone No.">
+                </div>            
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control form-dzn" id="exampleInputEmail1" placeholder="Country">
+                </div>            
+             </div>
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control form-dzn" id="exampleInputEmail1" placeholder="Company">
+                </div>            
+             </div>
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <textarea class="form-control form-dzn" rows="3" placeholder="Describe your idea"></textarea>
+                </div>            
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="form-group">
+                   <input type="file" name="file-input" id="file-input" class="help-block">                                   
+                  <p class="help-block">The total size of attachments should not exceed 10 MB. Allowed types: jpg, jpeg, png, gif, pdf, doc, docx, ppt, pptx, txt, rtf, odt, ods, odg, odp, xls, xlsx, xlxs, vcf, vcard, key, rar, zip, 7z, gz, gzip, tar.</p>
+               </div>
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="form-group">
+                 <input class="send-btn" type="submit" value="Submit">
+               </div>
+             </div>
+           </form>
+         </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+         <div class="con-add">
+           <h3>City Name</h3>
+           <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; 000 000 0000   Sales inquiries</p>
+            <h3>City Name</h3>
+           <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; 000 000 0000   Sales inquiries</p>
+
+         </div>
+      </div>
+  </div>
+</div>
+<script src="js/jarallax.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 1300
+		})
+	</script>
+<!-- //Jarallax -->
+
+<!-- smooth scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+<div  id="a001" class="about-bottom">
+  <div class="container"> 
+    <h3>It “Knows Your Customer:</h3>
+    <ul>
+      <li>Crescente enables banks to gather customer due diligence and expected account volume information during the account opening process. Banks can define questions that gather metrics for evaluating risks, and each customer is then assigned a risk rating. Profiling for existing customers can also be conducted. </li>
+      <li>Crescente also performs peer group analyses, which can help eliminate the complicated manual monitoring and linking of independent accounts to a group.</li>
+      <li>Crescente enables research analysts’ actions and notes to be made and stored for easy reference. As accounts are reviewed, a dashboard displays the analyses for the overriding officer to approve. </li>
+      <li>Crescente also stores analysts’ work in order to produce manager, board, and auditor reports for any defined time period. This process allows for easy and accurate recordkeeping and meets data storage requirements. </li>
+      <li>Crescente imports suspicious activities into its case management module for extended tracking and follow-up. Cases can be annotated with notes as well as any type of attached document or image file. </li>
+    </ul>
+
+    <h3>What It Does:</h3>
+    <ul>
+       <li>Automates the enterprise-wide monitoring and reporting of suspicious financial activities </li>
+       <li>Allows batch and near-real-time data to be electronically imported and analyzed from core processing platforms, 	wire transfer and teller systems, and state grower databases. </li>
+       <li>Stores all customer information and transaction records in a central database that is accessible to multiple assigned employees and the compliance department. </li>
+       <li>Gathers customer due diligence and expected account volume information during the account opening process. </li>
+       <li>Allows banks to define questions and assign risk ratings based on responses to questions asked during the account opening process. </li>
+       <li>Enables profiling of existing customers.</li>
+       <li>Performs peer group analyses, which can help eliminate the complicated manual monitoring and linking of independent accounts to a group. </li>
+       <li>Allows for actions and notes of research analysts to be made and stored for easy reference. </li>
+       <li>Displays a dashboard as accounts are reviewed that shows all the analyses for the overriding officer to approve before forwarding any applicable manager. </li>
+       <li>Stores analysts’ work to produce manager, board, and auditor reports for any defined time period. </li>
+       <li>Imports suspicious activities to the case management module for extended tracking and follow-up. </li>
+       <li>Allows cases to be annotated with notes as well as any type of attached document or image file. </li>
+    </ul>
+  
+    <h3>What It Does For You:</h3>
+    <ul>
+      <li>Saves banks valuable time and resources.</li>
+      <li>Reduces risks.</li>
+      <li>Uses browser-based technology to facilitate ease-of-use.</li>
+      <li>Allows for easy and accurate recordkeeping and data storage requirements.</li>
+      <li>Provides a complete audit trail.</li>
+      <li>Simplifies bank operations while minimizing staff, training, and on-site technical support requirements.</li>
+    </ul>
+    
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <div class="footer-left">
+          <p>© 2018 Crescente</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="footer-mid">
+          <ul>
+          <li><a class="facebook" href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a class="twitter" href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a class="linkedin" href="#" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a class="instagram" href="#" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a class="pinterest" href="#" title="pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+         <div class="footer-right">
+           <p><a href="#">Privacy Policy</a></p>
+         </div>
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/arrow23.js"></script>
+
+</body>
+</html>
